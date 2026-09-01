@@ -112,7 +112,7 @@ export default function GlobalFooter() {
           </div>
         </div>
 
-        <p className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-white/65">
+        <p className="mt-6 pt-6 text-center text-md text-white/65">
           © 2025 NaioSoft GmbH. All rights reserved.
         </p>
       </div>

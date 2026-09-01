@@ -134,7 +134,7 @@ function Benefits() {
           ))}
         </div>
         <aside className="rounded-2xl bg-[#EAF4F9] p-4">
-          <p className="text-[12px] font-semibold text-storemate-navy">From logo to app</p>
+          {/* <p className="text-[12px] font-semibold text-storemate-navy">From logo to app</p> */}
           <p className="font-heading mt-3 text-[x-large] font-extrabold tracking-tight">
             <span className="text-storemate-navy">Store</span>
             <span className="text-storemate-blue">Mate</span>
