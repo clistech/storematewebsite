@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import headerLogo from '/src/assets/header_logo2.png';
+
 
 const PRODUCT = [
   { name: 'How It Works', path: '/how-it-works' },
@@ -42,17 +44,20 @@ function SocialIcon({ label, children }) {
 
 export default function GlobalFooter() {
   return (
-    <footer className="bg-storemate-navy text-white">
+    <footer className="bg-[#10344C] text-white">
       <div className="mx-auto max-w-[1400px] px-4 pt-14 pb-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-5">
           <div className="col-span-2 space-y-4 md:col-span-3 lg:col-span-1">
             <Link
               to="/"
-              className="font-heading inline-block text-[x-large] font-extrabold tracking-tight"
+              className="shrink-0"
               aria-label="StoreMate home"
             >
-              <span className="text-white">Store</span>
-              <span className="text-storemate-lightblue">Mate</span>
+              <img
+                src={headerLogo}
+                alt="StoreMate"
+                className="h-9 w-auto object-contain sm:h-10"
+              />
             </Link>
             <p className="font-heading text-[1rem] font-bold">Organise. Save. Reduce waste.</p>
             <p className="text-sm text-white/75">Coming soon for iOS and Android.</p>
@@ -99,9 +104,8 @@ export default function GlobalFooter() {
                 <li key={lang.code}>
                   <button
                     type="button"
-                    className={`inline-flex items-center gap-2 transition hover:text-white ${
-                      lang.active ? 'font-semibold text-white' : ''
-                    }`}
+                    className={`inline-flex items-center gap-2 transition hover:text-white ${lang.active ? 'font-semibold text-white' : ''
+                      }`}
                   >
                     {lang.active ? <span className="h-1.5 w-1.5 rounded-full bg-white" /> : <span className="w-1.5" />}
                     {lang.label}

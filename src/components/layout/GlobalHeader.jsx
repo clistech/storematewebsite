@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import headerLogo from '/src/assets/header_logo.png';
 
 const NAV = [
   { name: 'How It Works', path: '/how-it-works' },
@@ -31,18 +32,20 @@ export default function GlobalHeader() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b bg-white/95 backdrop-blur-md transition-all duration-300 ${
-        isScrolled ? 'border-gray-200/80 py-2.5 shadow-sm' : 'border-transparent py-4'
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 border-b bg-white/95 backdrop-blur-md transition-all duration-300 ${isScrolled ? 'border-gray-200/80 py-2.5 shadow-sm' : 'border-transparent py-4'
+        }`}
     >
       <div className="relative mx-auto flex max-w-[1400px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           to="/"
-          className="font-heading shrink-0 text-[x-large] font-extrabold tracking-tight"
+          className="shrink-0"
           aria-label="StoreMate home"
         >
-          <span className="text-storemate-navy">Store</span>
-          <span className="text-storemate-blue">Mate</span>
+          <img
+            src={headerLogo}
+            alt="StoreMate"
+            className="h-9 w-auto object-contain sm:h-10"
+          />
         </Link>
 
         <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex" aria-label="Primary">
@@ -51,8 +54,7 @@ export default function GlobalHeader() {
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
-                `whitespace-nowrap text-[1rem] font-medium transition-colors ${
-                  isActive ? 'text-storemate-blue' : 'text-storemate-navy/80 hover:text-storemate-blue'
+                `whitespace-nowrap text-[1rem] font-medium transition-colors ${isActive ? 'text-storemate-blue' : 'text-storemate-navy/80 hover:text-storemate-blue'
                 }`
               }
             >
