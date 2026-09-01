@@ -1,8 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import GlobalHeader from './components/layout/GlobalHeader';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import GlobalFooter from './components/layout/GlobalFooter';
-import Home from './pages/Home';
+import GlobalHeader from './components/layout/GlobalHeader';
 import ComingSoon from './pages/ComingSoon';
+import Home from './pages/Home';
 
 export default function App() {
   return (
@@ -23,7 +23,7 @@ export default function App() {
             <Route path="/terms" element={<ComingSoon title="Terms & Conditions" />} />
             <Route path="/imprint" element={<ComingSoon title="Legal Notice" />} />
             <Route path="/download" element={<ComingSoon title="Download StoreMate" />} />
-            <Route path="*" element={<ComingSoon title="Looks like this item isn’t in stock" />} />
+            <Route path="*" element={<ComingSoon title="This page is currently under development and will be available soon." />} />
           </Routes>
         </div>
         <GlobalFooter />
